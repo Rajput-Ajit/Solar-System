@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title>
+				Solar System
+			</title>
+			<style>
+				
+				.main
+					{
+						height:720px;
+						width:100%;
+						display:flex;
+						background-color:white;
+						align-items:center;
+						justify-content:center;
+						background:black;
+						background-image:ur(space2.jpg);
+					}
+				.earth-path
+					{
+						height:500px;
+						width:500px;
+						border-radius:50%;
+						
+						display:flex;
+						background-color:;
+						align-items:center;
+						justify-content:center;
+						animation-name:rotation;
+						animation-duration:30s;
+						animation-iteration-count:infinite;
+						animation-fill-mode:forwards;
+						animation-timing-function:linear;
+					}
+				
+				.moon-path
+					{
+						height:180px;
+						width:180px;
+						
+						border-radius:50%;
+						background:;
+						position:absolute;
+						top:-10%;
+						right:0;
+						display:flex;
+						align-items:center;
+						justify-content:center;
+						animation-name:moon-path;
+						animation-duration:5s;
+						animation-iteration-count:infinite;
+						animation-fill-mode:forwards;
+						animation-timing-function:linear;
+					}
+					
+				.sun
+					{
+						height:220px;
+						width:220px;
+						border-radius:50%;
+						background:;
+						position:fixed;
+						animation-name:sun;
+						animation-duration:30s;
+						animation-iteration-count:infinite;
+						animation-fill-mode:forwards;
+						animation-timing-function:linear;
+						
+					}
+				
+				.sun img
+					{
+						 height:100%;
+						 width:100%;
+						 object-fit:cover;
+					}
+					
+				.earth
+					{
+						height:100px;
+						width:100px;
+						border-radius:50%;
+						background:blue;
+						animation-name:earth;
+						animation-duration:10s;
+						animation-iteration-count:infinite;
+						animation-fill-mode:forwards;
+						animation-timing-function:linear;
+					}
+				.earth img
+					{
+						 height:100%;
+						 width:100%;
+						 object-fit:cover;
+					}	
+					
+				.moon
+					{
+						height:50px;
+						width:50px;
+						background:white;
+						border-radius:50%;
+						position:absolute;
+						top:0;
+						right:0;
+						animation-name:moon;
+						animation-duration:30s;
+						animation-iteration-count:infinite;
+						animation-fill-mode:forwards;
+						animation-timing-function:linear;
+					}
+				
+				.moon img
+					{
+						 height:100%;
+						 width:100%;
+						 object-fit:cover;
+					}
+					
+				@keyframes 	rotation
+					{
+						from {transform:rotate(0deg);}
+						to {transform:rotate(360deg);}
+					}
+				@keyframes sun
+					{
+						from {transform:rotate(360deg);}
+						to {transform:rotate(150deg);}
+					}	
+					
+				@keyframes earth
+					{
+						from {transform:rotate(360deg);}
+						to {transform:rotate(0deg);}
+					}	
+				@keyframes moon-path
+					{
+						from {transform:rotate(0deg);}
+						to {transform:rotate(360deg);}
+					}		
+					
+				@keyframes moon
+					{
+						from {transform:rotate(0deg);}
+						to {transform:rotate(360deg);}
+					}		
+			</style>
+		</head>
+		<body>
+			<div class="main">
+				<div class="earth-path">
+					<div class="sun">
+						<img src="sun1.png">
+					</div>
+					<div class="moon-path">
+						<div class="earth">
+							<img src="earth2.png">
+						</div>
+						<div class="moon">
+							<img src="moon.png">
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</body>
+	</html>
